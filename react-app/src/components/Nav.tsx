@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/images/Logo.png";
 import styles from "./Nav.module.css";
 import * as data from "./links.json";
 const linksString = JSON.stringify(data);
@@ -28,10 +29,7 @@ const Links: React.FC<{ links: Link[] }> = ({ links }) => {
 const Nav: React.FC<{}> = () => {
   return (
     <nav className={styles.navbar}>
-      <div className={styles["logo-container"]}>
-        <span>Logo</span>
-      </div>
-      <Links links={links} />
+      <img src={logo} className={styles["header-logo"]} />
     </nav>
   );
 };

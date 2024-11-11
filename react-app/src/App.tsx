@@ -1,8 +1,5 @@
 import { useState } from "react";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
-import ListGroup from "./components/ListGroup";
-import Nav from "./components/Nav";
+import Blog from "./components/Blog";
 
 function App() {
   let items = ["New York", "San Fransisco", "Tokyo", "London", "Paris"];
@@ -14,24 +11,13 @@ function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
 
   return (
-    <div>
-      <>
-        <Nav />
-        <ListGroup
-          items={items}
-          heading="Cities"
-          onSelectItem={handleSelectItem}
-        />
-        {alertVisible && (
-          <Alert onClose={() => setAlertVisibility(false)}>
-            Hello <span>World</span>
-          </Alert>
-        )}
-        <Button color="primary" onClick={() => setAlertVisibility(true)}>
-          Testing
-        </Button>
-      </>
-    </div>
+    <Blog />
+    // <div>
+    //   <Container maxWidth="lg" className="App">
+    //     <Nav />
+    //     <FirstSection />
+    //   </Container>
+    // </div>
   );
 }
 
