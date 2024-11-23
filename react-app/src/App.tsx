@@ -1,24 +1,12 @@
-import { useState } from "react";
+import "./App.css";
 import Blog from "./components/Blog";
 
 function App() {
-  let items = ["New York", "San Fransisco", "Tokyo", "London", "Paris"];
-
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
-
-  const [alertVisible, setAlertVisibility] = useState(false);
-
-  return (
-    <Blog />
-    // <div>
-    //   <Container maxWidth="lg" className="App">
-    //     <Nav />
-    //     <FirstSection />
-    //   </Container>
-    // </div>
-  );
+	return (
+		<div className="App">
+			<Blog />
+		</div>
+	);
 }
 
 export default App;
